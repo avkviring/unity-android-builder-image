@@ -7,5 +7,6 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/d
 RUN apt-get update
 RUN apt-get install -y docker-ce-cli 
 RUN apt-get install -y npm
+RUN apt-get install -y libc6-i386
 COPY scripts/ /scripts/
 RUN chmod +x /scripts/unity-test.sh
